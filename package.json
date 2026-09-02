@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "@lumen/db",
   "version": "0.1.0",
   "type": "module",
@@ -21,11 +21,11 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@lumen/common": "workspace:*",
-    "@lumen/core": "workspace:*"
+    "@lumen/common": "git+https://github.com/lumen-ts/common.git",
+    "@lumen/core": "git+https://github.com/lumen-ts/core.git"
   },
   "devDependencies": {
-    "@lumen/zod": "workspace:*",
+    "@lumen/zod": "git+https://github.com/lumen-ts/zod.git",
     "@swc/core": "^1.16.1",
     "@types/pg": "^8.15.0",
     "reflect-metadata": "^0.2.2",
