@@ -1,0 +1,46 @@
+﻿{
+  "name": "@lumen/db",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@lumen/common": "workspace:*",
+    "@lumen/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@lumen/zod": "workspace:*",
+    "@swc/core": "^1.16.1",
+    "@types/pg": "^8.15.0",
+    "reflect-metadata": "^0.2.2",
+    "unplugin-swc": "^1.5.11",
+    "vitest": "^3.2.4",
+    "zod": "^4.5.4"
+  },
+  "peerDependencies": {
+    "mongodb": ">=6.0.0",
+    "mysql2": ">=3.0.0",
+    "pg": ">=8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "mongodb": { "optional": true },
+    "mysql2": { "optional": true },
+    "pg": { "optional": true }
+  }
+}
